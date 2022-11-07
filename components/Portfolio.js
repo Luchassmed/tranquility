@@ -92,7 +92,8 @@ export default function Portfolio() {
         <div className="bg-white py-24">
           <div className="flex justify-end px-48 pb-8">
             <h3 className="text-[#3B41F1] font-bold">
-              Portfolio <span className="text-gray-300">carousel:</span>
+              Portfolio{" "}
+              <span className="text-gray-300 font-normal">carousel:</span>
             </h3>
           </div>
           <div className="xl:pl-16 flex justify-end gap-3 px-48">

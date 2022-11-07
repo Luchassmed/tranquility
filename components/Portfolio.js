@@ -120,7 +120,25 @@ export default function Portfolio() {
             </div>
           </div>
         </div>
-        <div className="bg-amber-400 px-32">Hej</div>
+        <div className="bg-amber-400 px-32">
+          <a
+            href="https://github.com/Luchassmed/cs-course/tree/master/WITS22"
+            target="_blank"
+            className=""
+          >
+            <div className="flex flex-row gap-8 pb-4 py-24">
+              <div>
+                <p className="text-[#3B41F1] font-bold">01</p>
+              </div>
+              <div>
+                <h3 className="text-gray-300 texl-lg font-medium">
+                  Website carousel:
+                </h3>
+              </div>
+            </div>
+            <p className="font-bold">To be announced!</p>
+          </a>
+        </div>
       </div>
     </div>
   );

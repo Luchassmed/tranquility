@@ -1,14 +1,15 @@
 import React from "react";
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
+import { Bars3Icon } from "@heroicons/react/24/outline";
 
 export default function Socials() {
   return (
     <div className="absolute top-0 right-0 pr-48 pt-48">
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500">
-            Options
+          <Menu.Button className="inline-flex justify-center rounded-full bg-amber-400 p-2 text-white">
+            <Bars3Icon className="h-6 w-6" />
           </Menu.Button>
         </div>
 

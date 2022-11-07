@@ -2,6 +2,7 @@ import React from "react";
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { Bars3Icon } from "@heroicons/react/24/outline";
+import { AiFillLinkedin, AiFillGithub, AiFillMail } from "react-icons/ai";
 
 export default function Socials() {
   return (
@@ -22,16 +23,30 @@ export default function Socials() {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute right-0 w-56 mt-2 origin-top-right bg-transparent rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-            <div className="py-1">
+          <Menu.Items className="absolute w-10 mt-2 origin-top-right bg-transparent ">
+            <div className="py-1 flex flex-col items-center gap-4">
               <Menu.Item>
-                <a href="#">Account settings</a>
+                <a
+                  className=""
+                  href="https://www.linkedin.com/in/luchas-schmidt/"
+                  target="_blank"
+                >
+                  <AiFillLinkedin className="w-12 h-12 text-white" />
+                </a>
               </Menu.Item>
               <Menu.Item>
-                <a href="#">Support</a>
+                <a
+                  className=""
+                  href="https://github.com/Luchassmed"
+                  target="_blank"
+                >
+                  <AiFillGithub className="w-12 h-12 text-white" />
+                </a>
               </Menu.Item>
               <Menu.Item>
-                <a href="#">License</a>
+                <a className="" href="mailto: kapot@live.dk" target="_blank">
+                  <AiFillMail className="w-12 h-12 text-white" />
+                </a>
               </Menu.Item>
             </div>
           </Menu.Items>

@@ -9,7 +9,7 @@ export default function Socials() {
     <div className="absolute top-0 right-0 pr-48 pt-48">
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex justify-center rounded-full bg-[#5e6ad2] p-2 text-white">
+          <Menu.Button className="inline-flex justify-center rounded-full bg-[#5e6ad2] p-2 text-white transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300">
             <Bars3Icon className="h-6 w-6" />
           </Menu.Button>
         </div>
@@ -27,7 +27,7 @@ export default function Socials() {
             <div className="py-1 flex flex-col items-center gap-4">
               <Menu.Item>
                 <a
-                  className=""
+                  className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300"
                   href="https://www.linkedin.com/in/luchas-schmidt/"
                   target="_blank"
                 >
@@ -36,7 +36,7 @@ export default function Socials() {
               </Menu.Item>
               <Menu.Item>
                 <a
-                  className=""
+                  className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300"
                   href="https://github.com/Luchassmed"
                   target="_blank"
                 >
@@ -44,7 +44,11 @@ export default function Socials() {
                 </a>
               </Menu.Item>
               <Menu.Item>
-                <a className="" href="mailto: kapot@live.dk" target="_blank">
+                <a
+                  className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300"
+                  href="mailto: kapot@live.dk"
+                  target="_blank"
+                >
                   <AiFillMail className="w-12 h-12 text-white" />
                 </a>
               </Menu.Item>

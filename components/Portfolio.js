@@ -25,7 +25,7 @@ export default function Portfolio() {
                     <p className="text-[#3B41F1] font-bold">01</p>
                   </div>
                   <div>
-                    <h3 className="text-gray-300 texl-lg font-medium">
+                    <h3 className="text-[#8C8F99] texl-lg font-medium">
                       Next.js web app
                     </h3>
                   </div>
@@ -45,7 +45,7 @@ export default function Portfolio() {
                     <p className="text-[#3B41F1] font-bold">02</p>
                   </div>
                   <div>
-                    <h3 className="text-gray-300 texl-lg font-medium">
+                    <h3 className="text-[#8C8F99] texl-lg font-medium">
                       ReactJS API
                     </h3>
                   </div>
@@ -62,7 +62,7 @@ export default function Portfolio() {
                     <p className="text-[#3B41F1] font-bold">03</p>
                   </div>
                   <div>
-                    <h3 className="text-gray-300 texl-lg font-medium">
+                    <h3 className="text-[#8C8F99]  texl-lg font-medium">
                       Tile-based game made with Java
                     </h3>
                   </div>
@@ -79,7 +79,7 @@ export default function Portfolio() {
                     <p className="text-[#3B41F1] font-bold">04</p>
                   </div>
                   <div>
-                    <h3 className="text-gray-300 texl-lg font-medium">
+                    <h3 className="text-[#8C8F99]  texl-lg font-medium">
                       Web based blogserver made with PHP, HTML and API
                     </h3>
                   </div>
@@ -93,7 +93,7 @@ export default function Portfolio() {
           <div className="flex justify-end px-48 pb-8">
             <h3 className="text-[#003367] font-bold">
               Portfolio{" "}
-              <span className="text-gray-300 font-normal">carousel:</span>
+              <span className="text-[#8C8F99]  font-normal">carousel:</span>
             </h3>
           </div>
           <div className="xl:pl-16 flex justify-end gap-3 px-48">

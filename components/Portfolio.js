@@ -31,8 +31,8 @@ export default function Portfolio() {
                   </div>
                 </div>
                 <p className="font-bold">
-                  This portfolio website made with Next.js and styled with
-                  Tailwind CSS
+                  A different portfolio website made with Next.js and styled
+                  with Tailwind CSS
                 </p>
               </a>
               <a
@@ -93,7 +93,7 @@ export default function Portfolio() {
           <div className="flex justify-end px-48 pb-8">
             <h3 className="text-[#003367] font-bold">
               Portfolio{" "}
-              <span className="text-[#8C8F99]  font-normal">carousel:</span>
+              <span className="text-[#8C8F99] font-normal">carousel:</span>
             </h3>
           </div>
           <div className="xl:pl-16 flex justify-end gap-3 px-48">

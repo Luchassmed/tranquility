@@ -59,7 +59,7 @@ export default function Portfolio() {
               >
                 <div className="flex flex-row items-center gap-8 pb-4">
                   <div>
-                    <p className="text-[#003367] font-bold">03</p>
+                    <p className="text-[#3B41F1] font-bold">03</p>
                   </div>
                   <div>
                     <h3 className="text-gray-300 texl-lg font-medium">
@@ -76,7 +76,7 @@ export default function Portfolio() {
               >
                 <div className="flex flex-row gap-8 pb-4">
                   <div>
-                    <p className="text-[#003367] font-bold">04</p>
+                    <p className="text-[#3B41F1] font-bold">04</p>
                   </div>
                   <div>
                     <h3 className="text-gray-300 texl-lg font-medium">
@@ -109,7 +109,7 @@ export default function Portfolio() {
               />
             </div>
             <div
-              className="rounded-full bg-[#001A38]  hover:bg-blue-900 cursor-pointer flex justify-center items-center w-12 h-12 duration-150 text-center"
+              className="rounded-full bg-[#5e6ad2]  hover:bg-blue-900 cursor-pointer flex justify-center items-center w-12 h-12 duration-150 text-center"
               onClick={(e) =>
                 e.stopPropagation() || instanceRef.current?.next()
               }
@@ -121,7 +121,7 @@ export default function Portfolio() {
             </div>
           </div>
         </div>
-        <div className="bg-[#001A38] px-32">
+        <div className="bg-[#5e6ad2] px-32">
           <a
             href="https://github.com/Luchassmed/cs-course/tree/master/WITS22"
             target="_blank"

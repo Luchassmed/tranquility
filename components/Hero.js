@@ -6,7 +6,7 @@ export default function Hero() {
     <div>
       <div className="bg-gradient-to-r from-[#000212] to-[#0E1532]">
         <div className="flex flex-row items-center justify-around">
-          <div className="px-72 pt-72 pb-24">
+          <div className="px-24 xl:px-72 pt-32 xl:pt-72 pb-24">
             <motion.h1
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -35,7 +35,7 @@ export default function Hero() {
                 <h3 className="text-white font-bold text-lg pb-2">
                   Junior Development Specialsit at DaxMedia
                 </h3>
-                <h3 className="text-white font-bold text-lg">
+                <h3 className="text-white font-bold text-lg pt-2">
                   Computer Science and Informatics B.Sc student at Roskilde
                   University
                 </h3>
@@ -51,7 +51,7 @@ export default function Hero() {
                 visible: { scale: 1, opacity: 1, transition: { delay: 2 } },
               }}
             >
-              <img src="/avatar.png" className="" />
+              <img src="/avatar.png" className="xl:h-full md:h-1/2" />
             </motion.div>
           </div>
         </div>

@@ -7,7 +7,7 @@ import { AiFillLinkedin, AiFillGithub, AiFillMail } from "react-icons/ai";
 
 export default function Socials() {
   return (
-    <div className="absolute top-0 right-0 pr-48 pt-48">
+    <div className="absolute top-0 right-0 pr-12 xl:pr-48 pt-48">
       <Menu as="div" className="relative inline-block text-left">
         <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           <Menu.Button className="inline-flex justify-center rounded-full bg-[#5e6ad2] p-2 text-white">

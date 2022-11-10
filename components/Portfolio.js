@@ -13,7 +13,7 @@ export default function Portfolio() {
     <div>
       <div className="grid grid-cols-3 ">
         <div className="bg-white">
-          <div className="flex flex-row pl-72 py-24">
+          <div className="flex flex-row pl-10 py-12 xl:pl-72 xl:py-24">
             <div ref={sliderRef} className="keen-slider pb-10">
               <a
                 href="https://github.com/Luchassmed/windy"

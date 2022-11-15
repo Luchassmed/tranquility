@@ -5,7 +5,7 @@ import Highlight from "./Highlight";
 export default function Hero() {
   return (
     <div>
-      <div className="bg-gradient-to-r from-[#000212] to-[#0E1532]">
+      <div className="bg-gradient-to-r from-[#000212] to-[#0E1532] h-screen">
         <div className="flex flex-row items-center justify-around">
           <div className="px-10 md:px-24 xl:px-72 pt-32 xl:pt-72 pb-24">
             <motion.h1
@@ -50,7 +50,7 @@ export default function Hero() {
               </div>
             </motion.h3>
           </div>
-          <div className="px-10 pt-10 hidden md:block">
+          <div className="px-10 pt-10 md:pt-32 hidden md:block">
             <motion.div
               initial="hidden"
               animate="visible"
@@ -59,7 +59,7 @@ export default function Hero() {
                 visible: { scale: 1, opacity: 1, transition: { delay: 2 } },
               }}
             >
-              <img src="/avatar.png" className="xl:h-full md:h-1/2" />
+              <img src="/avatar.png" className="h-full" />
             </motion.div>
           </div>
         </div>

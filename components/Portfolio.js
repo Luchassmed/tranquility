@@ -1,6 +1,7 @@
 import React from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+import { motion } from "framer-motion";
 
 export default function Portfolio() {
   const [sliderRef, instanceRef] = useKeenSlider({
@@ -97,28 +98,32 @@ export default function Portfolio() {
             </h3>
           </div>
           <div className="xl:pl-16 flex md:justify-end gap-1 md:gap-3 pb-8 md:pb-0 md:px-48">
-            <div
-              className="rounded-full bg-[#003367]  hover:bg-blue-800 cursor-pointer flex justify-center items-center h-8 w-8 md:w-12 md:h-12 duration-150 text-center"
-              onClick={(e) =>
-                e.stopPropagation() || instanceRef.current?.prev()
-              }
-            >
-              <img
-                className="w-1/3"
-                src="https://cdn.shopify.com/s/files/1/0089/5015/3274/files/back.png?v=1645804157"
-              />
-            </div>
-            <div
-              className="rounded-full bg-[#5e6ad2]  hover:bg-blue-900 cursor-pointer flex justify-center items-center h-8 w-8 md:w-12 md:h-12 duration-150 text-center"
-              onClick={(e) =>
-                e.stopPropagation() || instanceRef.current?.next()
-              }
-            >
-              <img
-                className="w-1/3"
-                src="https://cdn.shopify.com/s/files/1/0089/5015/3274/files/next_2.png?v=1645804157"
-              />
-            </div>
+            <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              <div
+                className="rounded-full bg-[#003367]  hover:bg-blue-800 cursor-pointer flex justify-center items-center h-8 w-8 md:w-12 md:h-12 duration-150 text-center"
+                onClick={(e) =>
+                  e.stopPropagation() || instanceRef.current?.prev()
+                }
+              >
+                <img
+                  className="w-1/3"
+                  src="https://cdn.shopify.com/s/files/1/0089/5015/3274/files/back.png?v=1645804157"
+                />
+              </div>
+            </motion.h3>
+            <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              <div
+                className="rounded-full bg-[#5e6ad2]  hover:bg-blue-400 cursor-pointer flex justify-center items-center h-8 w-8 md:w-12 md:h-12 duration-150 text-center"
+                onClick={(e) =>
+                  e.stopPropagation() || instanceRef.current?.next()
+                }
+              >
+                <img
+                  className="w-1/3"
+                  src="https://cdn.shopify.com/s/files/1/0089/5015/3274/files/next_2.png?v=1645804157"
+                />
+              </div>
+            </motion.h3>
           </div>
         </div>
         <div className="bg-[#5e6ad2] py-12 lg:py-0 px-10 md:12 lg:px-32">

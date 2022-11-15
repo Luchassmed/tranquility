@@ -136,8 +136,8 @@ export default function Portfolio() {
                   Website carousel:
                 </h3>
               </div>
+              <p className="font-bold">To be announced!</p>
             </div>
-            <p className="font-bold">To be announced!</p>
           </a>
         </div>
       </div>

@@ -1,12 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Highlight from "./Highlight";
 
 export default function Hero() {
   return (
     <div>
       <div className="bg-gradient-to-r from-[#000212] to-[#0E1532]">
         <div className="flex flex-row items-center justify-around">
-          <div className="px-24 xl:px-72 pt-32 xl:pt-72 pb-24">
+          <div className="px-10 md:px-24 xl:px-72 pt-32 xl:pt-72 pb-24">
             <motion.h1
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -33,11 +34,18 @@ export default function Hero() {
                   WHAT DO I DO? I AM A ...
                 </p>
                 <h3 className="text-white font-bold text-lg pb-2">
-                  Junior Development Specialsit at DaxMedia
+                  Junior Development Specialsit at{" "}
+                  <Highlight
+                    text={"DaxMedia"}
+                    link={"https://www.daxmedia.eu/"}
+                  />
                 </h3>
                 <h3 className="text-white font-bold text-lg pt-2">
-                  Computer Science and Informatics B.Sc student at Roskilde
-                  University
+                  Computer Science and Informatics B.Sc student at{" "}
+                  <Highlight
+                    text={"Roskilde University"}
+                    link={"https://ruc.dk/"}
+                  />
                 </h3>
               </div>
             </motion.h3>

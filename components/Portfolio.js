@@ -11,7 +11,7 @@ export default function Portfolio() {
   });
   return (
     <div>
-      <div className="grid grid-cols-3 ">
+      <div className="md:grid grid-cols-3 ">
         <div className="bg-white">
           <div className="flex flex-row pl-10 py-12 xl:pl-72 xl:py-24">
             <div ref={sliderRef} className="keen-slider pb-10">
@@ -89,16 +89,16 @@ export default function Portfolio() {
             </div>
           </div>
         </div>
-        <div className="bg-white py-24">
-          <div className="flex justify-end px-48 pb-8">
+        <div className="bg-white md:py-24 flex items-center md:block">
+          <div className="flex px-10 md:justify-end md:px-48 pb-8">
             <h3 className="text-[#003367] font-bold">
               Portfolio{" "}
               <span className="text-[#8C8F99] font-normal">carousel:</span>
             </h3>
           </div>
-          <div className="xl:pl-16 flex justify-end gap-3 px-48">
+          <div className="xl:pl-16 flex md:justify-end gap-1 md:gap-3 pb-8 md:pb-0 md:px-48">
             <div
-              className="rounded-full bg-[#003367]  hover:bg-blue-800 cursor-pointer flex justify-center items-center w-12 h-12 duration-150 text-center"
+              className="rounded-full bg-[#003367]  hover:bg-blue-800 cursor-pointer flex justify-center items-center h-8 w-8 md:w-12 md:h-12 duration-150 text-center"
               onClick={(e) =>
                 e.stopPropagation() || instanceRef.current?.prev()
               }
@@ -109,7 +109,7 @@ export default function Portfolio() {
               />
             </div>
             <div
-              className="rounded-full bg-[#5e6ad2]  hover:bg-blue-900 cursor-pointer flex justify-center items-center w-12 h-12 duration-150 text-center"
+              className="rounded-full bg-[#5e6ad2]  hover:bg-blue-900 cursor-pointer flex justify-center items-center h-8 w-8 md:w-12 md:h-12 duration-150 text-center"
               onClick={(e) =>
                 e.stopPropagation() || instanceRef.current?.next()
               }
@@ -121,13 +121,13 @@ export default function Portfolio() {
             </div>
           </div>
         </div>
-        <div className="bg-[#5e6ad2] px-32">
+        <div className="bg-[#5e6ad2] py-10 md:py-0 px-10 md:px-32">
           <a
             href="https://github.com/Luchassmed/cs-course/tree/master/WITS22"
             target="_blank"
             className=""
           >
-            <div className="flex flex-row gap-8 pb-4 py-24">
+            <div className="flex flex-row gap-8 pb-4 md:py-24">
               <div>
                 <p className="text-[#003367] font-bold">01</p>
               </div>

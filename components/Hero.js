@@ -42,7 +42,7 @@ export default function Hero() {
               </div>
             </motion.h3>
           </div>
-          <div className="px-10 pt-10">
+          <div className="px-10 pt-10 hidden md:block">
             <motion.div
               initial="hidden"
               animate="visible"

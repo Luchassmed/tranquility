@@ -97,10 +97,10 @@ export default function Portfolio() {
               <span className="text-[#8C8F99] font-normal">carousel:</span>
             </h3>
           </div>
-          <div className="xl:pl-16 flex md:justify-end gap-1 md:gap-3 pb-8 md:pb-0 md:px-48">
+          <div className=" xl:pl-16 flex md:justify-end gap-1 md:gap-3 pb-8 md:pb-0 md:px-48">
             <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               <div
-                className="rounded-full bg-[#003367]  hover:bg-blue-800 cursor-pointer flex justify-center items-center h-8 w-8 md:w-12 md:h-12 duration-150 text-center"
+                className="select-none rounded-full bg-[#003367]  hover:bg-blue-800 cursor-pointer flex justify-center items-center h-8 w-8 md:w-12 md:h-12 duration-150 text-center"
                 onClick={(e) =>
                   e.stopPropagation() || instanceRef.current?.prev()
                 }
@@ -113,7 +113,7 @@ export default function Portfolio() {
             </motion.h3>
             <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               <div
-                className="rounded-full bg-[#5e6ad2]  hover:bg-blue-400 cursor-pointer flex justify-center items-center h-8 w-8 md:w-12 md:h-12 duration-150 text-center"
+                className="select-none rounded-full bg-[#5e6ad2]  hover:bg-blue-400 cursor-pointer flex justify-center items-center h-8 w-8 md:w-12 md:h-12 duration-150 text-center"
                 onClick={(e) =>
                   e.stopPropagation() || instanceRef.current?.next()
                 }

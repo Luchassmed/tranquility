@@ -3,7 +3,8 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { motion } from "framer-motion";
 
-export default function Portfolio() {
+export default function Portfolio(data) {
+  const gitdata = data;
   const [sliderRef, instanceRef] = useKeenSlider({
     loop: true,
     slides: {
@@ -27,7 +28,7 @@ export default function Portfolio() {
                   </div>
                   <div>
                     <h3 className="text-[#8C8F99] texl-lg font-medium">
-                      Next.js web app
+                      {gitdata.name};
                     </h3>
                   </div>
                 </div>

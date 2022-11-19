@@ -7,18 +7,16 @@ export default function Home({ data }) {
     <>
       <Socials />
       <Hero />
-      <Portfolio gitData={data} />
+      <Portfolio repos={data} />
     </>
   );
 }
 
-export async function yeet() {
-  const url = "https://api.github.com/users/Luchassmed/repos";
-  const respons = await fetch(url);
-  const resResult = respons.json;
+export async function getStaticProps() {
+  const res = await fetch(`https://api.github.com/users/Luchassmed/repos`);
+  const data = await res.json();
 
-  console.log(resResult);
   return {
-    props: { data: resResult },
+    props: { data },
   };
 }

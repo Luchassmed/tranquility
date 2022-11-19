@@ -3,91 +3,44 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { motion } from "framer-motion";
 
-export default function Portfolio(data) {
-  const gitdata = data;
+export default function Portfolio({ repos }) {
   const [sliderRef, instanceRef] = useKeenSlider({
     loop: true,
     slides: {
       perView: 1,
     },
   });
+
+  console.log(repos);
+
   return (
     <div>
       <div className="md:grid grid-cols-3 ">
         <div className="bg-white">
           <div className="flex flex-row pl-10 py-12 xl:pl-72 xl:py-24">
             <div ref={sliderRef} className="keen-slider pb-10">
-              <a
-                href="https://github.com/Luchassmed/windy"
-                target="_blank"
-                className="keen-slider__slide number-slide1"
-              >
-                <div className="flex flex-row items-center gap-8 pb-4">
-                  <div>
-                    <p className="text-[#3B41F1] font-bold">01</p>
-                  </div>
-                  <div>
-                    <h3 className="text-[#8C8F99] texl-lg font-medium">
-                      {gitdata.name};
-                    </h3>
-                  </div>
-                </div>
-                <p className="font-bold">
-                  A different portfolio website made with Next.js and styled
-                  with Tailwind CSS
-                </p>
-              </a>
-              <a
-                href="https://github.com/Luchassmed/react-api"
-                target="_blank"
-                className="keen-slider__slide number-slide2"
-              >
-                <div className="flex flex-row items-center gap-8 pb-4">
-                  <div>
-                    <p className="text-[#3B41F1] font-bold">02</p>
-                  </div>
-                  <div>
-                    <h3 className="text-[#8C8F99] texl-lg font-medium">
-                      ReactJS API
-                    </h3>
-                  </div>
-                </div>
-                <p className="font-bold">A todo-list made with ReactJS</p>
-              </a>
-              <a
-                href="https://github.com/Luchassmed/cs-course/tree/master/EC21"
-                target="_blank"
-                className="keen-slider__slide number-slide3"
-              >
-                <div className="flex flex-row items-center gap-8 pb-4">
-                  <div>
-                    <p className="text-[#3B41F1] font-bold">03</p>
-                  </div>
-                  <div>
-                    <h3 className="text-[#8C8F99]  texl-lg font-medium">
-                      Tile-based game made with Java
-                    </h3>
-                  </div>
-                </div>
-                <p className="font-bold">CS-course project for exam</p>
-              </a>
-              <a
-                href="https://github.com/Luchassmed/cs-course/tree/master/WITS22"
-                target="_blank"
-                className="keen-slider__slide number-slide4"
-              >
-                <div className="flex flex-row gap-8 pb-4">
-                  <div>
-                    <p className="text-[#3B41F1] font-bold">04</p>
-                  </div>
-                  <div>
-                    <h3 className="text-[#8C8F99]  texl-lg font-medium">
-                      Web based blogserver made with PHP, HTML and API
-                    </h3>
-                  </div>
-                </div>
-                <p className="font-bold">CS-course project for exam</p>
-              </a>
+              {repos.map((repo, i) => {
+                return (
+                  <a
+                    href={repo.url}
+                    target="_blank"
+                    className="keen-slider__slide number-slide1"
+                    key={i}
+                  >
+                    <div className="flex flex-row items-center gap-8 pb-4">
+                      <div>
+                        <p className="text-[#3B41F1] font-bold">{i + 1}</p>
+                      </div>
+                      <div>
+                        <h3 className="text-[#8C8F99] texl-lg font-medium">
+                          {repo.name}
+                        </h3>
+                      </div>
+                    </div>
+                    <p className="font-bold">{repo.description}</p>
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>

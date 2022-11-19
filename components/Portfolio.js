@@ -29,7 +29,7 @@ export default function Portfolio({ repos }) {
                   >
                     <div className="flex flex-row items-center gap-8 pb-4">
                       <div>
-                        <p className="text-[#3B41F1] font-bold">{i + 1}</p>
+                        <p className="text-[#3B41F1] font-bold">0{i + 1}</p>
                       </div>
                       <div>
                         <h3 className="text-[#8C8F99] texl-lg font-medium">

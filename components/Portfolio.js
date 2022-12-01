@@ -17,7 +17,7 @@ export default function Portfolio({ repos }) {
     <div>
       <div className="md:grid grid-cols-3 ">
         <div className="bg-white">
-          <div className="flex flex-row pl-10 py-12 xl:pl-72 xl:py-24">
+          <div className="flex flex-row pl-10 py-12 xl:pl-40 xl:py-24">
             <div ref={sliderRef} className="keen-slider pb-10">
               {repos.map((repo, i) => {
                 return (
@@ -44,14 +44,14 @@ export default function Portfolio({ repos }) {
             </div>
           </div>
         </div>
-        <div className="bg-white md:py-24 flex items-center md:block">
-          <div className="flex px-10 md:justify-end md:px-48 pb-8">
+        <div className="bg-white md:py-12 flex items-center md:block">
+          <div className="flex px-10 md:justify-end lg:px-32 pb-8 xl:pb-4 md:pb-4 lg:pb-8">
             <h3 className="text-[#003367] font-bold">
               Portfolio{" "}
               <span className="text-[#8C8F99] font-normal">carousel:</span>
             </h3>
           </div>
-          <div className=" xl:pl-16 flex md:justify-end gap-1 md:gap-3 pb-8 md:pb-0 md:px-48">
+          <div className=" xl:pl-16 flex md:justify-end md:px-10 gap-1 md:gap-3 pb-8 md:pb-0 lg:px-32">
             <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               <div
                 className="select-none rounded-full bg-[#003367]  hover:bg-blue-800 cursor-pointer flex justify-center items-center h-8 w-8 md:w-12 md:h-12 duration-150 text-center"

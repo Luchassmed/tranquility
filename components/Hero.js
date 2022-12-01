@@ -5,9 +5,9 @@ import Highlight from "./Highlight";
 export default function Hero() {
   return (
     <div>
-      <div className="bg-gradient-to-r from-[#000212] to-[#0E1532] h-screen">
+      <div className="bg-gradient-to-r from-[#000212] to-[#0E1532] min-h-screen">
         <div className="flex flex-row items-center justify-around">
-          <div className="px-10 md:px-24 xl:px-72 pt-32 xl:pt-72 pb-24">
+          <div className="px-10 lg:px-24 pt-32 xl:pt-72 pb-24">
             <motion.h1
               animate={{ opacity: 1, scale: 1 }}
               transition={{

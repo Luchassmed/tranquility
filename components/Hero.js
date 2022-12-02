@@ -17,7 +17,7 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 1 }}
             >
               <p className="text-6xl font-extrabold leading-relaxed text-transparent bg-clip-text bg-gradient-to-br from-gray-100 to-[#8C8F99]">
-                hi, i'm <br /> luchas schmidt
+                hi, i&apos;m <br /> luchas schmidt
               </p>
             </motion.h1>
 
@@ -31,7 +31,7 @@ export default function Hero() {
             >
               <div>
                 <p className="pt-10 pb-5 text-[#5e6ad2] font-bold text-lg">
-                  WHAT DO I DO? I AM A ...
+                  WHAT DO I DO? I&apos;M A ...
                 </p>
                 <h3 className="text-white font-light text-lg pb-2">
                   Junior Development Specialsit at{" "}

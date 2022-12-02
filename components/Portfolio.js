@@ -42,6 +42,7 @@ export default function Portfolio({ repos }) {
                   <a
                     href={repo.url}
                     target="_blank"
+                    rel="noreferrer"
                     className="keen-slider__slide number-slide1"
                     key={i}
                   >
@@ -105,6 +106,7 @@ export default function Portfolio({ repos }) {
                 <a
                   href={website.url}
                   target="_blank"
+                  rel="noreferrer"
                   className="keen-slider__slide number-slide1"
                   key={i}
                 >

@@ -49,6 +49,7 @@ export default function Socials() {
                       className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300"
                       href="https://www.linkedin.com/in/luchas-schmidt/"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <AiFillLinkedin className="h-8 w-8 md:w-12 md:h-12 text-white" />
                     </a>
@@ -58,6 +59,7 @@ export default function Socials() {
                       className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300"
                       href="https://github.com/Luchassmed"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <AiFillGithub className="h-8 w-8 md:w-12 md:h-12 text-white" />
                     </a>
@@ -67,6 +69,7 @@ export default function Socials() {
                       className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300"
                       href="mailto: kapot@live.dk"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <AiFillMail className="h-8 w-8 md:w-12 md:h-12 text-white" />
                     </a>

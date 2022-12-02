@@ -22,8 +22,14 @@ export default function Socials() {
             className="select-none relative inline-block text-left"
           >
             <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <Menu.Button className="inline-flex justify-center rounded-full bg-[#5e6ad2] p-2 text-white">
+              <Menu.Button className="md:inline-flex justify-center rounded-full bg-[#5e6ad2] p-2 text-white hidden">
                 <Bars3Icon className="h-6 w-6" />
+              </Menu.Button>
+            </motion.h3>
+
+            <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              <Menu.Button className="inline-flex justify-center rounded-full bg-transparent p-2 text-white md:hidden">
+                <img src="/avatar.png" className="h-16 w-16" />
               </Menu.Button>
             </motion.h3>
 
@@ -36,7 +42,7 @@ export default function Socials() {
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
             >
-              <Menu.Items className="absolute w-10 mt-2 origin-top-right bg-transparent ">
+              <Menu.Items className="absolute ml-4 md:ml-0 w-10 mt-2 origin-top-right bg-transparent ">
                 <div className="py-1 flex flex-col items-center gap-4">
                   <Menu.Item>
                     <a

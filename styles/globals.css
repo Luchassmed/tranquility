@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-.poppins {
-  font-family: "Poppins";
+@font-face {
+  font-family: "Airbnb Cereal";
+  src: url("../public/fonts/AirbnbCereal_W_Md.otf");
 }
 
 body {
-  font-family: "Poppins", "Inter", Arial, sans-serif;
+  font-family: "Airbnb Cereal", "Inter", Arial, sans-serif;
 }

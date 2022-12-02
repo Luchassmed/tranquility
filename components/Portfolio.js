@@ -99,7 +99,7 @@ export default function Portfolio({ repos }) {
             </motion.h3>
           </div>
         </div>
-        <div className="bg-[#5e6ad2] py-12 lg:py-0 xl:py-0 px-8 xl:px-32">
+        <div className="bg-[#5e6ad2] py-12 lg:py-0 px-8 xl:px-10 2xl:px-32">
           <div ref={sliderRefSecond} className="keen-slider">
             {websites.map((website, i) => {
               return (

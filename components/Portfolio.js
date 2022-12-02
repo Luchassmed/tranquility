@@ -11,13 +11,11 @@ export default function Portfolio({ repos }) {
     },
   });
 
-  console.log(repos);
-
   return (
     <div>
       <div className="md:grid grid-cols-3 ">
         <div className="bg-white">
-          <div className="flex flex-row pl-10 py-12 xl:pl-40 xl:py-24">
+          <div className="flex flex-row pl-10 py-12 lg:pl-40 2xl:pl-72 xl:py-24">
             <div ref={sliderRef} className="keen-slider pb-10">
               {repos.map((repo, i) => {
                 return (
@@ -45,7 +43,7 @@ export default function Portfolio({ repos }) {
           </div>
         </div>
         <div className="bg-white md:py-12 flex items-center md:block">
-          <div className="flex px-10 md:justify-end lg:px-32 pb-8 xl:pb-4 md:pb-4 lg:pb-8">
+          <div className="flex px-10 md:justify-end lg:px-32 pb-8 xl:pb-4 md:pb-4 lg:pb-8 xl:pt-12">
             <h3 className="text-[#003367] font-bold">
               Portfolio{" "}
               <span className="text-[#8C8F99] font-normal">carousel:</span>

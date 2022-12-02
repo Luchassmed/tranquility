@@ -33,14 +33,14 @@ export default function Hero() {
                 <p className="pt-10 pb-5 text-[#5e6ad2] font-bold text-lg">
                   WHAT DO I DO? I AM A ...
                 </p>
-                <h3 className="text-white font-bold text-lg pb-2">
+                <h3 className="text-white font-light text-lg pb-2">
                   Junior Development Specialsit at{" "}
                   <Highlight
                     text={"DaxMedia"}
                     link={"https://www.daxmedia.eu/"}
                   />
                 </h3>
-                <h3 className="text-white font-bold text-lg pt-2">
+                <h3 className="text-white font-light text-lg pt-2">
                   Computer Science and Informatics B.Sc student at{" "}
                   <Highlight
                     text={"Roskilde University"}

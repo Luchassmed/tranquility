@@ -64,7 +64,7 @@ export default function Portfolio({ repos }) {
           </div>
         </div>
         <div className="bg-white md:py-12 flex items-center md:block">
-          <div className="flex px-10 md:justify-end lg:px-32 pb-8 xl:pb-4 md:pb-4 lg:pb-8 xl:pt-12">
+          <div className="flex px-10 md:justify-end lg:px-24 pb-8 xl:pb-4 md:pb-4 lg:pb-4 xl:pt-12">
             <h3 className="text-[#003367] font-bold">
               Portfolio{" "}
               <span className="text-[#8C8F99] font-normal">carousel:</span>
@@ -99,7 +99,7 @@ export default function Portfolio({ repos }) {
             </motion.h3>
           </div>
         </div>
-        <div className="bg-[#5e6ad2] py-12 lg:py-0 px-10 md:12 lg:px-32">
+        <div className="bg-[#5e6ad2] py-12 lg:py-0 xl:py-0 px-10 xl:px-32">
           <div ref={sliderRefSecond} className="keen-slider">
             {websites.map((website, i) => {
               return (
@@ -110,7 +110,7 @@ export default function Portfolio({ repos }) {
                   className="keen-slider__slide number-slide1"
                   key={i}
                 >
-                  <div className="flex flex-col lg:pt-24">
+                  <div className="flex flex-col lg:pt-12 xl:pt-24">
                     <div className="flex flex-row gap-8">
                       <p className="text-[#003367] font-bold">0{i + 1}</p>
                       <h3 className="text-gray-300 texl-lg font-medium pb-4">

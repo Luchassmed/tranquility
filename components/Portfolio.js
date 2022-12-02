@@ -3,8 +3,28 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { motion } from "framer-motion";
 
+const websites = [
+  {
+    id: 1,
+    name: "European Audiohire",
+    url: "https://www.europeanaudiohire.com/",
+  },
+  {
+    id: 2,
+    name: "To be announced soon!",
+    url: "#",
+  },
+];
+
 export default function Portfolio({ repos }) {
   const [sliderRef, instanceRef] = useKeenSlider({
+    loop: true,
+    slides: {
+      perView: 1,
+    },
+  });
+
+  const [sliderRefSecond, instanceRefSecond] = useKeenSlider({
     loop: true,
     slides: {
       perView: 1,
@@ -49,7 +69,7 @@ export default function Portfolio({ repos }) {
               <span className="text-[#8C8F99] font-normal">carousel:</span>
             </h3>
           </div>
-          <div className=" xl:pl-16 flex md:justify-end md:px-10 gap-1 md:gap-3 pb-8 md:pb-0 lg:px-32">
+          <div className="xl:pl-16 flex md:justify-end md:px-10 gap-1 md:gap-3 pb-8 md:pb-0 lg:px-32 pl-16">
             <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               <div
                 className="select-none rounded-full bg-[#003367]  hover:bg-blue-800 cursor-pointer flex justify-center items-center h-8 w-8 md:w-12 md:h-12 duration-150 text-center"
@@ -79,23 +99,44 @@ export default function Portfolio({ repos }) {
           </div>
         </div>
         <div className="bg-[#5e6ad2] py-12 lg:py-0 px-10 md:12 lg:px-32">
-          <a
-            href="https://github.com/Luchassmed/cs-course/tree/master/WITS22"
-            target="_blank"
-            className=""
-          >
-            <div className="flex flex-row gap-8 pb-4 lg:py-24">
-              <div>
-                <p className="text-[#003367] font-bold">01</p>
+          <div ref={sliderRefSecond} className="keen-slider">
+            {websites.map((website, i) => {
+              return (
+                <a
+                  href={website.url}
+                  target="_blank"
+                  className="keen-slider__slide number-slide1"
+                  key={i}
+                >
+                  <div className="flex flex-col lg:pt-24">
+                    <div className="flex flex-row gap-8">
+                      <p className="text-[#003367] font-bold">0{i + 1}</p>
+                      <h3 className="text-gray-300 texl-lg font-medium pb-4">
+                        {website.name}
+                      </h3>
+                    </div>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+          <div className="flex flex-row items-center gap-16">
+            <p className="font-bold"> Websites I made myself, carousel:</p>
+
+            <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              <div
+                className="select-none rounded-full bg-gray-100  hover:bg-[#8C8F99] cursor-pointer flex justify-center items-center h-8 w-8 md:w-12 md:h-12 duration-150 text-center"
+                onClick={(e) =>
+                  e.stopPropagation() || instanceRefSecond.current?.next()
+                }
+              >
+                <img
+                  className="w-1/3"
+                  src="https://cdn.shopify.com/s/files/1/0089/5015/3274/files/next_2.png?v=1645804157"
+                />
               </div>
-              <div>
-                <h3 className="text-gray-300 texl-lg font-medium pb-4">
-                  Website carousel:
-                </h3>
-                <p className="font-bold">To be announced!</p>
-              </div>
-            </div>
-          </a>
+            </motion.h3>
+          </div>
         </div>
       </div>
     </div>

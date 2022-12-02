@@ -40,7 +40,7 @@ export default function Portfolio({ repos }) {
               {repos.map((repo, i) => {
                 return (
                   <a
-                    href={repo.url}
+                    href={repo.html_url}
                     target="_blank"
                     rel="noreferrer"
                     className="keen-slider__slide number-slide1"

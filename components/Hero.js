@@ -34,7 +34,7 @@ export default function Hero() {
                   WHAT DO I DO? I&apos;M A ...
                 </p>
                 <h3 className="text-white font-light text-lg pb-2">
-                  Junior Development Specialsit at{" "}
+                  Junior Development Specialist at{" "}
                   <Highlight
                     text={"DaxMedia"}
                     link={"https://www.daxmedia.eu/"}

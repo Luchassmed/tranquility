@@ -22,14 +22,9 @@ export default function Socials() {
             className="select-none relative inline-block text-left"
           >
             <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <Menu.Button className="md:inline-flex justify-center rounded-full bg-[#5e6ad2] p-2 text-white hidden">
-                <Bars3Icon className="h-6 w-6" />
-              </Menu.Button>
-            </motion.h3>
-
-            <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <Menu.Button className="inline-flex justify-center rounded-full bg-transparent p-2 text-white md:hidden">
-                <img src="/avatar.png" className="h-16 w-16" />
+              <Menu.Button className="inline-flex justify-center rounded-full bg-transparent md:bg-[#5e6ad2] p-2 text-white">
+                <Bars3Icon className="hidden md:block h-6 w-6" />
+                <img src="/avatar.png" className="md:hidden h-16 w-16" />
               </Menu.Button>
             </motion.h3>
 

@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Highlight from "./Highlight";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import Button from "./Button";
 
 export default function Hero() {
   return (
@@ -62,6 +64,9 @@ export default function Hero() {
               <img src="/avatar.png" className="h-full" />
             </motion.div>
           </div>
+        </div>
+        <div>
+          <Button />
         </div>
       </div>
     </div>

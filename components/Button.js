@@ -4,11 +4,12 @@ import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 
 export default function Button() {
-  const [toBottomButton, setToBottomButton] = useState(false);
+  const [toBottomButton, setToBottomButton] = useState(true);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY === 0 || null) {
+      console.log(window.scrollY);
+      if (window.scrollY == 0) {
         setToBottomButton(true);
       } else {
         setToBottomButton(false);
@@ -30,7 +31,7 @@ export default function Button() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{
               duration: 2,
-              delay: 1,
+              delay: 3,
             }}
             initial={{ opacity: 0, scale: 1 }}
             onClick={scrollDown}

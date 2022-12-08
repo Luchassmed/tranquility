@@ -8,7 +8,7 @@ export default function Button() {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY == 0) {
+      if (window.scrollY === 0 || null) {
         setToBottomButton(true);
       } else {
         setToBottomButton(false);

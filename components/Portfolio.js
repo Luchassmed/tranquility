@@ -11,6 +11,11 @@ const websites = [
   },
   {
     id: 2,
+    name: "Colonzone",
+    url: "https://colonzone.dk/",
+  },
+  {
+    id: 3,
     name: "To be announced soon!",
     url: "#",
   },

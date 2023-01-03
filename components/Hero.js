@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Highlight from "./Highlight";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import Button from "./Button";
 
 export default function Hero() {

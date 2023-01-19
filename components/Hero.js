@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Highlight from "./Highlight";
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import Button from "./Button";
 
 export default function Hero() {
@@ -32,7 +31,7 @@ export default function Hero() {
           >
             <div>
               <p className="pt-10 pb-5 text-[#5e6ad2] font-bold text-lg">
-                WHAT DO I DO? I&apos;M A ...
+                I&apos;M A ...
               </p>
               <h3 className="text-white font-light text-lg pb-2">
                 Junior Development Specialist at{" "}

@@ -127,7 +127,7 @@ export default function Portfolio({ repos }) {
               );
             })}
           </div>
-          <div className="flex flex-row items-center gap-10 md:gap-16">
+          <div className="flex flex-row items-center gap-12 md:gap-16">
             <p className="font-bold"> Websites I&apos;ve made, carousel:</p>
 
             <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>

@@ -11,11 +11,16 @@ const websites = [
   },
   {
     id: 2,
+    name: "Det Grønne Forskernetværk",
+    url: "https://www.dgfn.org/",
+  },
+  {
+    id: 3,
     name: "Colonzone",
     url: "https://colonzone.dk/",
   },
   {
-    id: 3,
+    id: 4,
     name: "To be announced soon!",
     url: "#",
   },

@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <div className="bg-gradient-to-r from-[#000212] to-[#0E1532] min-h-screen">
       <div className="flex flex-row items-center justify-around">
-        <div className="px-10 lg:px-24 pt-32 2xl:pt-72 pb-24">
+        <div className="px-10 lg:px-24 pt-32 lg:pt-48 2xl:pt-72 pb-24">
           <motion.h1
             animate={{ opacity: 1, scale: 1 }}
             transition={{

@@ -1,7 +1,7 @@
-import React from "react";
 import { motion } from "framer-motion";
-import Highlight from "./Highlight";
+import React from "react";
 import Button from "./Button";
+import Highlight from "./Highlight";
 
 export default function Hero() {
   return (

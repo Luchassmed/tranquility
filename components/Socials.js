@@ -1,9 +1,8 @@
-import React from "react";
-import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
-import { motion } from "framer-motion";
 import { Bars3Icon } from "@heroicons/react/24/outline";
-import { AiFillLinkedin, AiFillGithub, AiFillMail } from "react-icons/ai";
+import { motion } from "framer-motion";
+import React, { Fragment } from "react";
+import { AiFillGithub, AiFillLinkedin, AiFillMail } from "react-icons/ai";
 
 export default function Socials() {
   return (

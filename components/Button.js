@@ -1,7 +1,6 @@
-import React from "react";
-import { useEffect, useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
 
 export default function Button() {
   const [toBottomButton, setToBottomButton] = useState(true);

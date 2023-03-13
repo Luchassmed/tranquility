@@ -1,7 +1,7 @@
-import React from "react";
-import { useKeenSlider } from "keen-slider/react";
-import "keen-slider/keen-slider.min.css";
 import { motion } from "framer-motion";
+import "keen-slider/keen-slider.min.css";
+import { useKeenSlider } from "keen-slider/react";
+import React from "react";
 
 const websites = [
   {

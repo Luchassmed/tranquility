@@ -1,5 +1,5 @@
-import React from "react";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+import React from "react";
 
 export default function Highlight({ text, link }) {
   return (

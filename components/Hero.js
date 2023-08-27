@@ -34,9 +34,9 @@ export default function Hero() {
                 I&apos;M A ...
               </p>
               <h3 className="text-white font-light text-lg pb-2">
-                Student assistant at{" "}
+                Student Assistant at{" "}
                 <Highlight
-                  text={"Styrelsen for Arbejdsmarked og Rekruttering"}
+                  text={"Danish Agency for Labour Market and Recruitment"}
                   link={"https://star.dk/"}
                 />
               </h3>

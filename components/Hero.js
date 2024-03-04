@@ -34,17 +34,19 @@ export default function Hero() {
                 I&apos;M A ...
               </p>
               <h3 className="text-white font-light text-lg pb-2">
-                Student Assistant at{" "}
+                Junior Consultant at{" "}
                 <Highlight
-                  text={"Danish Agency for Labour Market and Recruitment"}
-                  link={"https://star.dk/"}
+                  text={
+                    "The Tech Collective, powered by Implement Consulting Group"
+                  }
+                  link={"https://thetechcollective.eu/"}
                 />
               </h3>
               <h3 className="text-white font-light text-lg pt-2">
                 Computer Science and Engineering MSc student at{" "}
                 <Highlight
                   text={"Danish Technical University"}
-                  link={"https://dtu.dk/"}
+                  link={"https://www.dtu.dk/english/"}
                 />
               </h3>
             </div>

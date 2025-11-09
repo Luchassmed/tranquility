@@ -1,14 +1,20 @@
+import Head from "next/head";
 import Hero from "../components/Hero";
 import Portfolio from "../components/Portfolio";
 import Socials from "../components/Socials";
 
 export default function Home({ data = [] }) {
   return (
-    <main className="relative">
-      <Socials />
-      <Hero />
-      <Portfolio repos={data} />
-    </main>
+    <>
+      <Head>
+        <title>Luchas Schmidt</title>
+      </Head>
+      <main className="relative">
+        <Socials />
+        <Hero />
+        <Portfolio repos={data} />
+      </main>
+    </>
   );
 }
 

@@ -18,7 +18,7 @@ export default function Hero() {
             >
               <div className="border-4 border-white p-8 inline-block">
                 <p className="text-sm font-bold uppercase tracking-widest mb-4">
-                  Hello, I'm
+                  Hello, I&apos;m
                 </p>
                 <h1 className="text-6xl md:text-7xl lg:text-8xl font-black leading-none">
                   LUCHAS

@@ -6,7 +6,6 @@ export default function Document() {
       <Head>
         <link rel="stylesheet" href="https://use.typekit.net/zsh7xbq.css" />
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
-        <title>Luchas Schmidt</title>
       </Head>
       <body>
         <Main />

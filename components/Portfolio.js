@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-import "keen-slider/keen-slider.min.css";
-import { useKeenSlider } from "keen-slider/react";
-import React from "react";
+import { ArrowTopRightOnSquareIcon, CodeBracketIcon } from "@heroicons/react/24/outline";
+import React, { useState } from "react";
 
 const websites = [
   {
@@ -21,136 +20,154 @@ const websites = [
   },
   {
     id: 4,
-    name: "To be announced soon!",
-    url: "#",
+    name: "Polyrattan",
+    url: "https://www.polyrattan.dk/",
   },
 ];
 
 export default function Portfolio({ repos }) {
-  const [sliderRef, instanceRef] = useKeenSlider({
-    loop: true,
-    slides: {
-      perView: 1,
-    },
-  });
+  const [selectedTab, setSelectedTab] = useState("repos");
 
-  const [sliderRefSecond, instanceRefSecond] = useKeenSlider({
-    loop: true,
-    slides: {
-      perView: 1,
-    },
-  });
+  // Filter and sort repos - show only public repos with descriptions
+  const filteredRepos = repos
+    .filter((repo) => !repo.fork && repo.description)
+    .slice(0, 6)
+    .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
 
   return (
-    <div>
-      <div className="md:grid grid-cols-3 ">
-        <div className="bg-white">
-          <div className="flex flex-row pl-8 py-12 lg:pl-40 2xl:pl-72 xl:py-24">
-            <div ref={sliderRef} className="keen-slider pb-10">
-              {repos.map((repo, i) => {
-                return (
-                  <a
-                    href={repo.html_url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="keen-slider__slide number-slide1"
-                    key={i}
-                  >
-                    <div className="flex flex-row items-center gap-8 pb-4">
-                      <div>
-                        <p className="text-[#3B41F1] font-bold">0{i + 1}</p>
-                      </div>
-                      <div>
-                        <h3 className="text-[#8C8F99] texl-lg font-medium">
-                          {repo.name}
-                        </h3>
-                      </div>
+    <section className="py-24 bg-white text-black">
+      <div className="container mx-auto px-6 lg:px-12 xl:px-24">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-16"
+        >
+          <div className="border-4 border-black p-6 inline-block">
+            <h2 className="text-5xl md:text-6xl font-black uppercase">
+              My Work
+            </h2>
+          </div>
+        </motion.div>
+
+        {/* Tabs */}
+        <div className="flex justify-start mb-12">
+          <div className="flex gap-0 border-4 border-black">
+            <button
+              onClick={() => setSelectedTab("repos")}
+              className={`px-8 py-4 font-black uppercase text-sm border-r-4 border-black transition-all ${
+                selectedTab === "repos"
+                  ? "bg-black text-white"
+                  : "bg-white text-black hover:bg-gray-100"
+              }`}
+            >
+              GitHub
+            </button>
+            <button
+              onClick={() => setSelectedTab("websites")}
+              className={`px-8 py-4 font-black uppercase text-sm transition-all ${
+                selectedTab === "websites"
+                  ? "bg-black text-white"
+                  : "bg-white text-black hover:bg-gray-100"
+              }`}
+            >
+              Websites
+            </button>
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="min-h-[400px]">
+          {selectedTab === "repos" ? (
+            <motion.div
+              key="repos"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4 }}
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+            >
+              {filteredRepos.map((repo, index) => (
+                <motion.a
+                  href={repo.html_url}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={repo.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  whileHover={{ scale: 1.02 }}
+                  className="group bg-white border-4 border-black p-6 hover:bg-black hover:text-white transition-all duration-200 flex flex-col h-full"
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="border-2 border-black p-2 bg-white group-hover:bg-black group-hover:border-white transition-all">
+                      <CodeBracketIcon className="w-5 h-5 text-black group-hover:text-white" />
                     </div>
-                    <p className="font-bold">{repo.description}</p>
-                  </a>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-        <div className="bg-white md:py-12 flex items-center md:block">
-          <div className="flex px-8 md:justify-end lg:px-24 pb-8 xl:pb-4 md:pb-4 lg:pb-4 xl:pt-12">
-            <h3 className="text-[#003367] font-bold">
-              Portfolio{" "}
-              <span className="text-[#8C8F99] font-normal">carousel:</span>
-            </h3>
-          </div>
-          <div className="xl:pl-16 flex md:justify-end md:px-10 gap-1 md:gap-3 pb-8 md:pb-0 lg:px-32 pl-16">
-            <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <div
-                className="select-none rounded-full bg-[#003367]  hover:bg-blue-800 cursor-pointer flex justify-center items-center h-8 w-8 md:w-12 md:h-12 duration-150 text-center"
-                onClick={(e) =>
-                  e.stopPropagation() || instanceRef.current?.prev()
-                }
-              >
-                <img
-                  className="w-1/3"
-                  src="https://cdn.shopify.com/s/files/1/0089/5015/3274/files/back.png?v=1645804157"
-                />
-              </div>
-            </motion.h3>
-            <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <div
-                className="select-none rounded-full bg-[#5e6ad2]  hover:bg-blue-400 cursor-pointer flex justify-center items-center h-8 w-8 md:w-12 md:h-12 duration-150 text-center"
-                onClick={(e) =>
-                  e.stopPropagation() || instanceRef.current?.next()
-                }
-              >
-                <img
-                  className="w-1/3"
-                  src="https://cdn.shopify.com/s/files/1/0089/5015/3274/files/next_2.png?v=1645804157"
-                />
-              </div>
-            </motion.h3>
-          </div>
-        </div>
-        <div className="bg-[#5e6ad2] py-12 lg:py-0 px-8 xl:px-10 2xl:px-32">
-          <div ref={sliderRefSecond} className="keen-slider">
-            {websites.map((website, i) => {
-              return (
-                <a
+                    <ArrowTopRightOnSquareIcon className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-2xl font-black mb-3 uppercase">
+                    {repo.name}
+                  </h3>
+                  <p className="text-sm mb-4 leading-relaxed line-clamp-3 flex-grow">
+                    {repo.description}
+                  </p>
+                  {repo.language && (
+                    <div className="flex items-center gap-2 text-xs font-bold pt-4 border-t-2 border-black group-hover:border-white mt-auto">
+                      <span className="w-3 h-3 bg-black group-hover:bg-white border-2 border-black group-hover:border-white"></span>
+                      {repo.language}
+                    </div>
+                  )}
+                </motion.a>
+              ))}
+            </motion.div>
+          ) : (
+            <motion.div
+              key="websites"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4 }}
+              className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+            >
+              {websites.map((website, index) => (
+                <motion.a
                   href={website.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="keen-slider__slide number-slide1"
-                  key={i}
+                  key={website.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  whileHover={{ scale: 1.02 }}
+                  className={`group border-4 border-black p-8 transition-all duration-200 ${
+                    website.url === "#"
+                      ? "bg-gray-200 cursor-not-allowed"
+                      : "bg-white hover:bg-black hover:text-white"
+                  }`}
                 >
-                  <div className="flex flex-col lg:pt-12 xl:pt-24">
-                    <div className="flex flex-row gap-8">
-                      <p className="text-[#003367] font-bold">0{i + 1}</p>
-                      <h3 className="text-gray-300 texl-lg font-medium pb-4">
-                        {website.name}
-                      </h3>
-                    </div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-4xl font-black">
+                      {String(website.id).padStart(2, "0")}
+                    </span>
+                    {website.url !== "#" && (
+                      <ArrowTopRightOnSquareIcon className="w-5 h-5" />
+                    )}
                   </div>
-                </a>
-              );
-            })}
-          </div>
-          <div className="flex flex-row items-center justify-between pr-4">
-            <p className="font-bold"> Websites I&apos;ve made, carousel:</p>
-
-            <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <div
-                className="select-none rounded-full bg-gray-100 hover:bg-[#8C8F99] cursor-pointer flex justify-center items-center h-8 w-8 md:w-12 md:h-12 duration-150 text-center"
-                onClick={(e) =>
-                  e.stopPropagation() || instanceRefSecond.current?.next()
-                }
-              >
-                <img
-                  className="w-1/3"
-                  src="https://cdn.shopify.com/s/files/1/0089/5015/3274/files/next_2.png?v=1645804157"
-                />
-              </div>
-            </motion.h3>
-          </div>
+                  <h3 className={`text-lg font-black uppercase ${
+                    website.url === "#" ? "text-gray-500" : ""
+                  }`}>
+                    {website.name}
+                  </h3>
+                </motion.a>
+              ))}
+            </motion.div>
+          )}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

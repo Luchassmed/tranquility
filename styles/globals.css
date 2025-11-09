@@ -7,6 +7,18 @@
   src: url("../public/fonts/AirbnbCereal_W_Md.otf");
 }
 
-body {
-  font-family: "Airbnb Cereal", "Inter", Arial, sans-serif;
+@layer base {
+  body {
+    font-family: "Airbnb Cereal", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
 }

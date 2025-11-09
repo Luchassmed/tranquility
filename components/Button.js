@@ -3,43 +3,45 @@ import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
 export default function Button() {
-  const [toBottomButton, setToBottomButton] = useState(true);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY == 0) {
-        setToBottomButton(true);
-      } else {
-        setToBottomButton(false);
-      }
-    });
+    const handleScroll = () => {
+      setIsVisible(window.scrollY === 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollDown = () => {
-    window.scrollTo({
-      top: 1000,
-      behavior: "smooth",
-    });
+  const scrollToPortfolio = () => {
+    const portfolioSection = document.querySelector("section:nth-of-type(2)");
+    if (portfolioSection) {
+      portfolioSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
+
+  if (!isVisible) return null;
+
   return (
-    <div>
-      <div className="flex flex-col justify-end items-center pt:10 xl:pt-24">
-        {toBottomButton && (
-          <motion.button
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 2,
-              delay: 3,
-            }}
-            initial={{ opacity: 0, scale: 1 }}
-            onClick={scrollDown}
-          >
-            <p>
-              <ChevronDownIcon className="text-white h-10 animate-bounce" />
-            </p>
-          </motion.button>
-        )}
-      </div>
-    </div>
+    <motion.button
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 1 }}
+      onClick={scrollToPortfolio}
+      className="group border-4 border-white p-3 bg-white text-black hover:bg-black hover:text-white transition-all duration-200"
+      aria-label="Scroll to portfolio"
+    >
+      <motion.div
+        animate={{ y: [0, 8, 0] }}
+        transition={{
+          duration: 1.5,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      >
+        <ChevronDownIcon className="w-6 h-6 font-black" />
+      </motion.div>
+    </motion.button>
   );
 }

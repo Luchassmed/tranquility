@@ -3,18 +3,14 @@ import React from "react";
 
 export default function Highlight({ text, link }) {
   return (
-    <div>
-      <a
-        className="group transition-all duration-300 ease-in-out"
-        href={link ? link : "#"}
-        target="_blank"
-        rel="noreferrer"
-      >
-        <span className="bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-          {text ? text : "#"}{" "}
-          <ArrowTopRightOnSquareIcon className="h-4 inline mb-1" />
-        </span>
-      </a>
-    </div>
+    <a
+      href={link || "#"}
+      target="_blank"
+      rel="noreferrer"
+      className="group inline-flex items-center gap-1 font-black uppercase underline decoration-4 underline-offset-4 hover:bg-white hover:text-black transition-all duration-200 px-1"
+    >
+      <span>{text || "#"}</span>
+      <ArrowTopRightOnSquareIcon className="w-4 h-4" />
+    </a>
   );
 }

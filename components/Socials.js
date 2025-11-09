@@ -1,79 +1,55 @@
-import { Menu, Transition } from "@headlessui/react";
-import { Bars3Icon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
-import React, { Fragment } from "react";
+import React from "react";
 import { AiFillGithub, AiFillLinkedin, AiFillMail } from "react-icons/ai";
 
 export default function Socials() {
-  return (
-    <>
-      <motion.h2
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{
-          duration: 4,
-          delay: 0.3,
-        }}
-        initial={{ opacity: 0, scale: 1 }}
-      >
-        <div className="absolute top-0 right-0 pr-6 pt-6 md:pr-12 xl:pr-48 md:pt-48">
-          <Menu
-            as="div"
-            className="select-none relative inline-block text-left"
-          >
-            <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <Menu.Button className="inline-flex justify-center rounded-full bg-transparent md:bg-[#5e6ad2] p-2 text-white">
-                <Bars3Icon className="hidden md:block h-6 w-6" />
-                <img src="/avatar.png" className="md:hidden h-16 w-16" />
-              </Menu.Button>
-            </motion.h3>
+  const socialLinks = [
+    {
+      name: "LinkedIn",
+      icon: AiFillLinkedin,
+      href: "https://www.linkedin.com/in/luchas-schmidt/",
+    },
+    {
+      name: "GitHub",
+      icon: AiFillGithub,
+      href: "https://github.com/Luchassmed",
+    },
+    {
+      name: "Email",
+      icon: AiFillMail,
+      href: "mailto:kapot@live.dk",
+    },
+  ];
 
-            <Transition
-              as={Fragment}
-              enter="transition ease-out duration-100"
-              enterFrom="transform opacity-0 scale-95"
-              enterTo="transform opacity-100 scale-100"
-              leave="transition ease-in duration-75"
-              leaveFrom="transform opacity-100 scale-100"
-              leaveTo="transform opacity-0 scale-95"
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: 20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6, delay: 0.5 }}
+      className="fixed top-6 right-6 md:top-8 md:right-8 z-50"
+    >
+      <div className="flex flex-col gap-3">
+        {socialLinks.map((social, index) => {
+          const Icon = social.icon;
+          return (
+            <motion.a
+              key={social.name}
+              href={social.href}
+              target="_blank"
+              rel="noreferrer"
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-white border-4 border-white p-3 hover:bg-black hover:text-white transition-all duration-200"
+              aria-label={social.name}
             >
-              <Menu.Items className="absolute ml-4 md:ml-0 w-10 mt-2 origin-top-right bg-transparent ">
-                <div className="py-1 flex flex-col items-center gap-4">
-                  <Menu.Item>
-                    <a
-                      className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300"
-                      href="https://www.linkedin.com/in/luchas-schmidt/"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <AiFillLinkedin className="h-8 w-8 md:w-12 md:h-12 text-white" />
-                    </a>
-                  </Menu.Item>
-                  <Menu.Item>
-                    <a
-                      className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300"
-                      href="https://github.com/Luchassmed"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <AiFillGithub className="h-8 w-8 md:w-12 md:h-12 text-white" />
-                    </a>
-                  </Menu.Item>
-                  <Menu.Item>
-                    <a
-                      className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300"
-                      href="mailto: kapot@live.dk"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <AiFillMail className="h-8 w-8 md:w-12 md:h-12 text-white" />
-                    </a>
-                  </Menu.Item>
-                </div>
-              </Menu.Items>
-            </Transition>
-          </Menu>
-        </div>
-      </motion.h2>
-    </>
+              <Icon className="w-5 h-5" />
+            </motion.a>
+          );
+        })}
+      </div>
+    </motion.div>
   );
 }

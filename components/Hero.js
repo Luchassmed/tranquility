@@ -5,69 +5,62 @@ import Highlight from "./Highlight";
 
 export default function Hero() {
   return (
-    <div className="bg-gradient-to-r from-[#000212] to-[#0E1532] min-h-screen">
-      <div className="flex flex-row items-center justify-around">
-        <div className="px-10 lg:px-24 pt-32 lg:pt-48 2xl:pt-72 pb-24">
-          <motion.h1
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 2,
-              delay: 0.3,
-            }}
-            initial={{ opacity: 0, scale: 1 }}
-          >
-            <p className="text-4xl md:text-6xl font-extrabold leading-relaxed text-transparent bg-clip-text bg-gradient-to-br from-gray-100 to-[#8C8F99]">
-              hi, i&apos;m <br /> luchas schmidt
-            </p>
-          </motion.h1>
+    <section className="relative min-h-screen flex items-center justify-center bg-black text-white">
+      <div className="container mx-auto px-6 lg:px-12 xl:px-24 py-24">
+        <div className="max-w-4xl mx-auto">
+          {/* Text Content */}
+          <div className="space-y-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="space-y-8"
+            >
+              <div className="border-4 border-white p-8 inline-block">
+                <p className="text-sm font-bold uppercase tracking-widest mb-4">
+                  Hello, I'm
+                </p>
+                <h1 className="text-6xl md:text-7xl lg:text-8xl font-black leading-none">
+                  LUCHAS
+                  <br />
+                  SCHMIDT
+                </h1>
+              </div>
+            </motion.div>
 
-          <motion.h3
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 4,
-              delay: 0.3,
-            }}
-            initial={{ opacity: 0, scale: 1 }}
-          >
-            <div>
-              <p className="pt-10 pb-5 text-[#5e6ad2] font-bold text-lg">
-                I&apos;M A ...
-              </p>
-              <h3 className="text-white font-light text-lg pb-2">
-                Junior Consultant at{" "}
-                <Highlight
-                  text={
-                    "The Tech Collective, powered by Implement Consulting Group"
-                  }
-                  link={"https://thetechcollective.eu/"}
-                />
-              </h3>
-              <h3 className="text-white font-light text-lg pt-2">
-                Computer Science and Engineering MSc student at{" "}
-                <Highlight
-                  text={"Danish Technical University"}
-                  link={"https://www.dtu.dk/english/"}
-                />
-              </h3>
-            </div>
-          </motion.h3>
-        </div>
-        <div className="px-10 pt-10 md:pt-32 hidden md:block">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: { scale: 0.8, opacity: 0 },
-              visible: { scale: 1, opacity: 1, transition: { delay: 2 } },
-            }}
-          >
-            <img src="/avatar.png" className="h-full" />
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="space-y-6 pt-4"
+            >
+              <div className="bg-white text-black p-6 border-4 border-white">
+                <div className="space-y-4 text-lg leading-relaxed font-medium">
+                  <p>
+                    Junior Consultant at{" "}
+                    <Highlight
+                      text="The Tech Collective, powered by Implement Consulting Group"
+                      link="https://thetechcollective.eu/"
+                    />
+                  </p>
+                  <p>
+                    Computer Science and Engineering MSc student at{" "}
+                    <Highlight
+                      text="Danish Technical University"
+                      link="https://www.dtu.dk/english/"
+                    />
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </div>
-      <div>
+
+      {/* Scroll Button */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
         <Button />
       </div>
-    </div>
+    </section>
   );
 }

@@ -46,7 +46,7 @@ export default function Hero() {
                   <p>
                     Computer Science and Engineering MSc student at{" "}
                     <Highlight
-                      text="Danish Technical University"
+                      text="Technical University of Denmark"
                       link="https://www.dtu.dk/english/"
                     />
                   </p>

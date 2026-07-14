@@ -37,14 +37,12 @@ export default function Hero() {
               <div className="bg-white text-black p-6 border-4 border-white">
                 <div className="space-y-4 text-lg leading-relaxed font-medium">
                   <p>
-                    Junior Consultant at{" "}
-                    <Highlight
-                      text="The Tech Collective, powered by Implement Consulting Group"
-                      link="https://thetechcollective.eu/"
-                    />
+                    Cybersecurity Associate at{" "}
+                    <Highlight text="PwC Denmark" link="https://www.pwc.dk/" />
+                    , focusing on IAM &amp; Digital Identities
                   </p>
                   <p>
-                    Computer Science and Engineering MSc student at{" "}
+                    MSc in Computer Science &amp; Engineering from{" "}
                     <Highlight
                       text="Technical University of Denmark"
                       link="https://www.dtu.dk/english/"
